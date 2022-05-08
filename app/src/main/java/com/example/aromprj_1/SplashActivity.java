@@ -26,4 +26,5 @@ public class SplashActivity extends AppCompatActivity {
             }
         },SPLASH_SCREENTIME);
     }
+    //hi
 }
