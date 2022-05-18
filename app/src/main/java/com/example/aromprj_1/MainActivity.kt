@@ -15,22 +15,35 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        viewPager.adapter=PagerAdapter(this)
-        viewPager.orientation=ViewPager2.ORIENTATION_HORIZONTAL
-        viewPager.offscreenPageLimit=3
-        indicator.setViewPager(viewPager)
-        indicator.createIndicators(3,0)
+        viewPager1.adapter=PagerAdapter(this)
+        viewPager1.orientation=ViewPager2.ORIENTATION_HORIZONTAL
+        viewPager1.offscreenPageLimit=3
+        indicator1.setViewPager(viewPager1)
+        indicator1.createIndicators(3,0)
 
-        viewPager.registerOnPageChangeCallback(object :ViewPager2.OnPageChangeCallback(){
+        viewPager1.registerOnPageChangeCallback(object :ViewPager2.OnPageChangeCallback(){
             override fun onPageSelected(position: Int) {
                 super.onPageSelected(position)
-                indicator.animatePageSelected(position)
+                indicator1.animatePageSelected(position)
 
                 Toast.makeText(applicationContext,"${position}번 페이지 선택",Toast.LENGTH_SHORT).show()
             }
         })
 
+        viewPager2.adapter=PagerAdapter(this)
+        viewPager2.orientation=ViewPager2.ORIENTATION_HORIZONTAL
+        viewPager2.offscreenPageLimit=3
+        indicator2.setViewPager(viewPager2)
+        indicator2.createIndicators(3,0)
 
+        viewPager2.registerOnPageChangeCallback(object :ViewPager2.OnPageChangeCallback(){
+            override fun onPageSelected(position: Int) {
+                super.onPageSelected(position)
+                indicator2.animatePageSelected(position)
+
+                Toast.makeText(applicationContext,"${position}번 페이지 선택",Toast.LENGTH_SHORT).show()
+            }
+        })
     }
     inner class PagerAdapter:FragmentStateAdapter{
         constructor(activity: FragmentActivity):super(activity)
