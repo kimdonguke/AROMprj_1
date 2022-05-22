@@ -1,16 +1,15 @@
 package com.example.aromprj_1
 
-import android.content.Intent
+import android.content.Context
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
-import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.RecyclerView
 import kotlinx.android.synthetic.main.recycler_room.view.*
 
 
-class viewPagerAdapter() : RecyclerView.Adapter<viewPagerAdapter.ViewHolder>() {
+class recyclerAdapter() : RecyclerView.Adapter<recyclerAdapter.ViewHolder>() {
     var items = ArrayList<roomInfo>()
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
@@ -23,7 +22,7 @@ class viewPagerAdapter() : RecyclerView.Adapter<viewPagerAdapter.ViewHolder>() {
         holder.setItem(item)
 
         holder.itemView.setOnClickListener {
-
+            Toast.makeText(it.context,"${position+1} 아이템 클릭!",Toast.LENGTH_SHORT).show()
         }
     }
     override fun getItemCount() = items.size

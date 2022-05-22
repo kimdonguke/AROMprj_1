@@ -18,13 +18,13 @@ import kotlinx.android.synthetic.main.fragment_home.*
 class HomeFragment : Fragment() {
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
         return inflater.inflate(R.layout.fragment_home, container, false)
-
     }
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
 
         viewPager()
     }
+
     fun viewPager() {
         viewPager1.adapter=PagerAdapter(requireActivity())
         viewPager1.orientation= ViewPager2.ORIENTATION_HORIZONTAL
@@ -36,8 +36,6 @@ class HomeFragment : Fragment() {
             override fun onPageSelected(position: Int) {
                 super.onPageSelected(position)
                 indicator1.animatePageSelected(position)
-
-                Toast.makeText(context,"${position}번 페이지 선택", Toast.LENGTH_SHORT).show()
             }
         })
     }

@@ -3,6 +3,7 @@ package com.example.aromprj_1
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.fragment.app.Fragment
+import com.example.aromprj_1.bottomNavigationFragment.BoardFragment
 import com.example.aromprj_1.bottomNavigationFragment.CategoryFragment
 import com.example.aromprj_1.bottomNavigationFragment.HomeFragment
 import kotlinx.android.synthetic.main.activity_main.*
@@ -39,7 +40,7 @@ class MainActivity : AppCompatActivity() {
                 fragment= CategoryFragment()
             }
             3->{
-                fragment=Fragment3()
+                fragment=BoardFragment()
             }
             4->{
 
