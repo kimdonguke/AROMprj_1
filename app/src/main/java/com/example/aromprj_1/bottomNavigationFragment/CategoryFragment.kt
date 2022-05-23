@@ -8,13 +8,10 @@ import android.view.ViewGroup
 import androidx.fragment.app.FragmentActivity
 import androidx.viewpager2.adapter.FragmentStateAdapter
 import androidx.viewpager2.widget.ViewPager2
-import com.example.aromprj_1.BoardFragmentItem1
-import com.example.aromprj_1.BoardFragmentItem2
 import com.example.aromprj_1.R
 import com.google.android.material.tabs.TabLayoutMediator
-import kotlinx.android.synthetic.main.fragment_board.*
 import kotlinx.android.synthetic.main.fragment_category.*
-
+// 네비게이션 - 카테고리
 class CategoryFragment : Fragment() {
     val tabTitleArray = arrayOf(
         "장르",
@@ -42,9 +39,9 @@ class CategoryFragment : Fragment() {
 
         override fun createFragment(position: Int): Fragment {
             when(position){
-                0-> return BoardFragmentItem1()
-                1-> return BoardFragmentItem2()
-                else -> return BoardFragmentItem1()
+                0-> return CategoryFragmentItem1()
+                1-> return CategoryFragmentItem2()
+                else -> return CategoryFragmentItem1()
             }
         }
     }

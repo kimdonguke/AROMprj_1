@@ -14,7 +14,7 @@ import com.example.aromprj_1.Fragment2
 import com.example.aromprj_1.Fragment3
 import com.example.aromprj_1.R
 import kotlinx.android.synthetic.main.fragment_home.*
-
+// 네이게이션 - 홈
 class HomeFragment : Fragment() {
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
         return inflater.inflate(R.layout.fragment_home, container, false)

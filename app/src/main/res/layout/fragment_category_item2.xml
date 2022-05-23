@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:background="#9E6363"
-    tools:context=".BoardFragmentItem1">
+    tools:context=".bottomNavigationFragment.CategoryFragmentItem1">
 
     <TextView
         android:id="@+id/textView"
