@@ -27,9 +27,9 @@ class RecyclerRoomAdapter() : RecyclerView.Adapter<RecyclerRoomAdapter.ViewHolde
 
     inner class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         fun setItem(item:RoomInfo) {
-            itemView.roomName.text="방탈출카페 이름"
-            itemView.roomAddress.text="주소"
-            itemView.roomNote.text ="상세설명"
+            itemView.roomName.text=item.roomName
+            itemView.roomAddress.text=item.roomAddress
+            itemView.roomNote.text =item.roomNote
         }
     }
 }

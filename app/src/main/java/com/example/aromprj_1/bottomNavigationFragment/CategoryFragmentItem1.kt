@@ -20,16 +20,16 @@ class CategoryFragmentItem1 : Fragment() {
         super.onActivityCreated(savedInstanceState)
 
         val layoutManager =LinearLayoutManager(context,LinearLayoutManager.VERTICAL,false)
-        recyclerLocal.layoutManager=layoutManager
+        recyclerTema.layoutManager=layoutManager
         val adapter= RecyclerRoomAdapter()
 
         for (i in 0 until 10) {
             val name = "방탈출"
             val address = "광진구"
-            val info = "안녕하세요"
+            val note = "안녕하세요"
 
-            adapter.items.add(RoomInfo(name, address, info))
+            adapter.items.add(RoomInfo(name, address, note))
         }
-        recyclerLocal.adapter=adapter
+        recyclerTema.adapter=adapter
     }
 }
