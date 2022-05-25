@@ -1,7 +1,6 @@
-package com.example.aromprj_1.bottomNavigationFragment
+package com.example.aromprj_1.Category
 
 import android.os.Bundle
-import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
@@ -12,9 +11,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.aromprj_1.R
 import com.example.aromprj_1.RecyclerRoomAdapter
 import com.example.aromprj_1.RoomInfo
-import kotlinx.android.synthetic.main.fragment_category_item1.*
 import kotlinx.android.synthetic.main.fragment_category_item2.*
-import kotlinx.android.synthetic.main.recycler_room.*
 
 // 네비게이션 - 카테고리 - 지역
 class CategoryFragmentItem2 : Fragment() {
@@ -44,7 +41,6 @@ class CategoryFragmentItem2 : Fragment() {
         dropdownAdapter.setDropDownViewResource(R.layout.support_simple_spinner_dropdown_item)
         category_local_spinner.adapter=dropdownAdapter
 
-
         var selectArray= ArrayList<RoomInfo>()
         selectArray.addAll(adapter.items)
         category_local_spinner.onItemSelectedListener=object:AdapterView.OnItemSelectedListener{
@@ -61,8 +57,11 @@ class CategoryFragmentItem2 : Fragment() {
                             adapter.items.add(selectArray[i])
                         }
                     }
-                    recyclerLocal.adapter=adapter
                 }
+                else if (position==0){
+                    adapter.items.addAll(selectArray)
+                }
+                recyclerLocal.adapter=adapter
             }
 
             override fun onNothingSelected(parent: AdapterView<*>?) {

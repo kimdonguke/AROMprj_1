@@ -1,4 +1,4 @@
-package com.example.aromprj_1.bottomNavigationFragment
+package com.example.aromprj_1.MyInfo
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -15,9 +15,9 @@ import com.example.aromprj_1.*
 import com.google.android.material.tabs.TabLayoutMediator
 import kotlinx.android.synthetic.main.fragment_board.*
 import kotlinx.android.synthetic.main.fragment_home.*
-// 예약
-class BookFragment : Fragment() {
+// 내정보
+class MyInfoFragment : Fragment() {
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
-        return inflater.inflate(R.layout.fragment_book, container, false)
+        return inflater.inflate(R.layout.fragment_myinfo, container, false)
     }
 }

@@ -1,4 +1,4 @@
-package com.example.aromprj_1.bottomNavigationFragment
+package com.example.aromprj_1.Category
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment

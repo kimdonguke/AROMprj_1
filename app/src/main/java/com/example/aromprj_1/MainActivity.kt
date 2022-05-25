@@ -3,7 +3,11 @@ package com.example.aromprj_1
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.fragment.app.Fragment
-import com.example.aromprj_1.bottomNavigationFragment.*
+import com.example.aromprj_1.Board.BoardFragment
+import com.example.aromprj_1.Book.BookFragment
+import com.example.aromprj_1.Category.CategoryFragment
+import com.example.aromprj_1.Home.HomeFragment
+import com.example.aromprj_1.MyInfo.MyInfoFragment
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
@@ -44,13 +48,13 @@ class MainActivity : AppCompatActivity() {
                 fragment= CategoryFragment()
             }
             3->{
-                fragment=BoardFragment()
+                fragment= BoardFragment()
             }
             4->{
-                fragment=BookFragment()
+                fragment= BookFragment()
             }
             5->{
-                fragment=MyInfoFragment()
+                fragment= MyInfoFragment()
             }
         }
         supportFragmentManager.beginTransaction().replace(R.id.mainContainer, fragment).commit()

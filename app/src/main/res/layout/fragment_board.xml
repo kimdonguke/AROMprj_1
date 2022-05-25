@@ -35,7 +35,45 @@
                     android:textStyle="bold" />
 
             </FrameLayout>
+            <com.google.android.material.tabs.TabLayout
+                android:id="@+id/Boardtabs"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
 
+                <com.google.android.material.tabs.TabItem
+                    android:id="@+id/Boardtab1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="테마추천" />
+                <com.google.android.material.tabs.TabItem
+                    android:id="@+id/Boardtab2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="일행구함" />
+                <com.google.android.material.tabs.TabItem
+                    android:id="@+id/Boardtab3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="시간교환" />
+                <com.google.android.material.tabs.TabItem
+                    android:id="@+id/Boardtab4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="자유질문" />
+            </com.google.android.material.tabs.TabLayout>
+
+            <FrameLayout
+                android:id="@+id/boardContainerFrame"
+                android:layout_width="match_parent"
+                android:layout_height="132dp">
+
+                <androidx.viewpager2.widget.ViewPager2
+                    android:id="@+id/viewPager4"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal" />
+
+            </FrameLayout>
 
 
 
