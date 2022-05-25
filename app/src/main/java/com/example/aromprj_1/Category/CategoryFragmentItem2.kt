@@ -7,6 +7,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.AdapterView
 import android.widget.ArrayAdapter
+import android.widget.Toast
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.aromprj_1.R
 import com.example.aromprj_1.RecyclerRoomAdapter
@@ -32,10 +33,12 @@ class CategoryFragmentItem2 : Fragment() {
             val name = "방탈출"
             val address = "의정부시"
             val info = "안녕"
-
             adapter.items.add(RoomInfo(name, address, info))
         }
-        recyclerLocal.adapter=adapter
+        val name = "서울에 있는 방탈출"
+        val address = "광진구"
+        val info = "안녕~~~~~~~~~!~!"
+        adapter.items.add(RoomInfo(name, address, info))
 
         val dropdownAdapter=ArrayAdapter(requireContext(),R.layout.support_simple_spinner_dropdown_item,itemArray)
         dropdownAdapter.setDropDownViewResource(R.layout.support_simple_spinner_dropdown_item)
@@ -50,8 +53,8 @@ class CategoryFragmentItem2 : Fragment() {
                 position: Int,
                 id: Long
             ) {
+                adapter.items.clear()
                 if (position!=0) {
-                    adapter.items.clear()
                     for (i in 0 until selectArray.size) {
                         if (selectArray[i].roomAddress.equals(itemArray[position])) {
                             adapter.items.add(selectArray[i])
